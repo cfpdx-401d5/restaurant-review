@@ -8,23 +8,23 @@ This app tracks restaurants and user ratings by Portland neighborhood
 
 ### Main App States ("pages") aka Routes 
 
-1. `/welcome` - A main welcome/landing page that greets users and is publically assessable.
+1. `/` - A main welcome/landing page that greets users and is publically assessable.
 2. `/neighborhoods` - A Neighborhood page that lists all neighborhoods showing the name of the neigborhood
 along with count of saved restaurants for each neighborhood.
-  1. Provide a way for the user to select one quadrant and list will filter **client side** to that quadrant. 
-  1. User should be able to add a new neighborhood. Can be inline or use a popup.
-  1. User can click on a neighborhood and transition to the `/neighborhoods/:id` state
+    1. Provide a way for the user to select one quadrant and list will filter **client side** to that quadrant. The filter should be reflected in the url. The filter should have an "all" choice that resets to all neighboorhoods. 
+    1. User should be able to add a new neighborhood. Can be inline or use a popup.
+    1. User can click on a neighborhood and transition to the `/neighborhoods/:id` state
 3. `/neighborhoods/:id` - Shows a list of all restaurants that have been saved to that neigborhood, 
 and an average user rating.
-  1. The list should default from highest-ranking to lowest, but offer an option to toggle sort order (client side sorting) to lowest-to-highest.
-  1. User can add a new restaurant. Can be inline or use a popup.
-  1. If the user added the restaurant, they can delete it.
-  1. User can click on a restaurant and go to the `/restaurants/:id` state.
-  1. Provide a way for the user to go back to the neighborhood the restaurant belongs in
+    1. The list should default from highest-ranking to lowest, but offer an option to toggle sort order (client side sorting) to lowest-to-highest.
+    1. User can add a new restaurant. Can be inline or use a popup.
+    1. If the user added the restaurant, they can delete it.
+    1. User can click on a restaurant and go to the `/restaurants/:id` state.
+    1. Provide a way for the user to go back to the neighborhood the restaurant belongs in
 4. `/restaurants/:id` - Detail view of restaurant and list of ratings by user.
-  1. User can add a rating to a restaurant between 1 and 5 "starts" and leave a comment. 
+    1. User can add a rating to a restaurant between 1 and 5 "starts" and leave a comment. 
   They can change their existing rating and comment, but cannot add a second.
-  1. Provide a way for the user to go back to the restaurant
+    1. Provide a way for the user to go back to the restaurant
   
 Routes 2, 3 and 4 are protected, there must be a valid signed in user.
 
