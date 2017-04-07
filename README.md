@@ -44,7 +44,7 @@ The server needs to offer a data API that supports the above app flows:
 
 * Sign in, up, token validation. User needs to include a required `username` field along with `password`
 * Create `neighborhood` (takes a name and "quadrant" which is one of N, NW, SW, SE, or NE. All fields required)
-* Create `restaurant` (`name`, and `neighborhood` (id key to neighborhood), `createBy` (user id who created)
+* Create `restaurant` (`name`, and `neighborhood` (id key to neighborhood), `createdBy` (user id who created)
 `address`, which is complex object with `street`, `city`, and `zip` properties. All fields required)
 * Delete `restaurant` (must validate it was created by same user trying to delete) which should also delete 
 any `reviews` associated with that restaurnat
